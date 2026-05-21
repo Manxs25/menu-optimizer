@@ -72,6 +72,21 @@ PORT=5000
 
 Do not commit `.env`. It is already ignored by Git.
 
+For deployment, set these environment variables on the backend host:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+GROQ_API_KEY=your_groq_api_key
+FRONTEND_URL=https://your-frontend-domain.com
+```
+
+Set this environment variable on the frontend host:
+
+```env
+VITE_API_URL=https://your-backend-domain.com/api
+```
+
 ## Install Dependencies
 
 Backend:
@@ -92,7 +107,7 @@ npm install
 Start backend from the project root:
 
 ```bash
-node server.js
+npm start
 ```
 
 Backend runs at:
