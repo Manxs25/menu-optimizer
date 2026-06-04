@@ -1,4 +1,4 @@
-const Dish = require("../models/Dish");
+const Dish = require("../models/dish");
 const Groq = require("groq-sdk");
 
 function normalizeHeader(value = "") {
